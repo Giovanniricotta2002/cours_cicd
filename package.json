@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "run": "node index.js"
+    "run": "node index.js",
+    "test:test": "node --experimental-vm-modules node_modules/jest/bin/jest.js --reporters=jest-junit",
+    "test:test:coverage": "npm run test:test -- --coverage"
   },
   "repository": {
     "type": "git",
@@ -32,7 +34,7 @@
   "jest-junit": {
     "outputDirectory": "reports",
     "outputName": "jest-junit.xml",
-    "ancestorSeparator": " > ",
+    "ancestorSeparator": " › ",
     "uniqueOutputName": "false",
     "suiteNameTemplate": "{filepath}",
     "classNameTemplate": "{classname}",
