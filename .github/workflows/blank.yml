@@ -42,7 +42,7 @@ jobs:
         run: npm run test:test:coverage
 
       - name: ls
-        run: ls -la /**
+        run: ls -la ./**
       
       - name: Publish TU Report
         uses: dorny/test-reporter@v1
