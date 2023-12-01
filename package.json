@@ -25,7 +25,8 @@
   "jest": {
     "testEnvironment": "node",
     "reporters": ["default","jest-junit"],
-    "coverageDirectory": "reports/coverage"
+    "coverageDirectory": "reports/coverage",
+    "testPathIgnorePatterns": ["testAction/"]
   },
   "jest-junit": {
     "outputDirectory": "reports",

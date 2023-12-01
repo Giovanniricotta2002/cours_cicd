@@ -47,8 +47,8 @@ jobs:
       - name: Test
         run: npm run test:test:coverage
 
-      - name: ls
-        run: ls -la ./**
+      # - name: ls
+      #   run: ls -la ./**
       
       - name: Publish TU Report
         uses: dorny/test-reporter@v1
