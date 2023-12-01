@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "run": "node index.js",
-    "test:test": "node --experimental-vm-modules node_modules/jest/bin/jest.js --reporters=jest-junit",
+    "test:test": "node --experimental-vm-modules node_modules/jest/bin/jest.js --config=./package.json",
     "test:test:coverage": "npm run test:test -- --coverage"
   },
   "author": "",
