@@ -1,13 +1,12 @@
-<script>
-import { ref } from 'vue'
-
-export function useCounter() {
-    const count = ref(0)
-    const increment = () => count.value++
-    
-    return {
-        count,
-        increment
-    }
-}
-</script>
+<template>
+    <div>
+      <header>
+        <slot name="header" />
+      </header>
+      <footer>
+        <slot name="footer" />
+      </footer>
+    </div>
+  </template>
+  
+  <script setup></script>

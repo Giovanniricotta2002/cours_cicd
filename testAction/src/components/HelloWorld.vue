@@ -3,6 +3,10 @@ defineProps({
   msg: {
     type: String,
     required: true
+  },
+  test: {
+    type: Number,
+    default: 123
   }
 })
 </script>
@@ -14,6 +18,10 @@ defineProps({
       You’ve successfully created a project with
       <a href="https://vitejs.dev/" target="_blank" rel="noopener">Vite</a> +
       <a href="https://vuejs.org/" target="_blank" rel="noopener">Vue 3</a>.
+      <input data-cy="counter" :value="test"/>
+      <button data-cy="btn" @click="test++">{{ test }}</button>
+      <div data-cy="insert"><slot /></div>
+
     </h3>
   </div>
 </template>
