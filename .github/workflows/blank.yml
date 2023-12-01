@@ -35,8 +35,8 @@ jobs:
         run: npm ci
 
       # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
-        run: npm run run
+      # - name: Run a multi-line script
+      #   run: npm run run
       
       - name: Test
         run: npm run test:test:coverage

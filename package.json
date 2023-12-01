@@ -9,10 +9,6 @@
     "test:test": "node --experimental-vm-modules node_modules/jest/bin/jest.js --reporters=jest-junit",
     "test:test:coverage": "npm run test:test -- --coverage"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Giovanniricotta2002/cours_cicd.git"
-  },
   "author": "",
   "license": "ISC",
   "type": "module",
