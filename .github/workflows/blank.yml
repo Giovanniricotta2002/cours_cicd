@@ -79,3 +79,25 @@ jobs:
       - name: Rune Vitetest
         run: npm run test:unit
         working-directory: ./testAction
+
+  testCypress: 
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+      # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+        # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v4
+        
+      - name: Configure Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          
+          # Runs a single command using the runners shell
+      - name: Run npm ci
+        run: npm ci
+        working-directory: ./testAction
+        
+      - name: Run Cypress
+        run: npm run test:e2e
+        working-directory: ./testAction
