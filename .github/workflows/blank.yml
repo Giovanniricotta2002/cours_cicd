@@ -23,7 +23,7 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - name: Configure Node
         uses: actions/setup-node@v4
@@ -40,6 +40,9 @@ jobs:
       
       - name: Test
         run: npm run test:test:coverage
+
+      - name: ls
+        run: ls -la
       
       - name: Publish TU Report
         uses: dorny/test-reporter@v1
