@@ -102,7 +102,8 @@ jobs:
         
   #     - name: Run Cypress
   #       # run: npm run test:e2e
-  #       uses: bahmutov/cypress-workflows/.github/workflows/standard.yml@v1
+  #       uses: cypress-io/github-action@v6
   #       with:
-  #         start: 'npm start'
+  #         component: true
+  #         browser: firefox
   #       # working-directory: ./testAction

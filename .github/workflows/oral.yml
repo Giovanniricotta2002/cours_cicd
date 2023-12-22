@@ -1,0 +1,20 @@
+name: ORAL
+
+on:
+    workflow_dispatch:
+
+permissions:
+    contents: read
+    actions: read
+    checks: write
+
+jobs:
+    preparation:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v4
+
+            - name: Introduction
+              run: sleep 5
+            - name: CI
+              run: sleep 5
