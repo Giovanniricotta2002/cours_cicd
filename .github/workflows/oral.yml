@@ -17,4 +17,20 @@ jobs:
             - name: Introduction
               run: sleep 5
             - name: CI
-              run: sleep 5
+              run: sleep 2
+    ci:
+        runs-on: ubuntu-latest
+        needs: [preparation]
+        steps:
+            - uses: actions/checkout@v4
+
+            - name: Configure Node
+              uses: actions/setup-node@v4
+              with:
+                node-version: 20
+            
+            - name: Run npm ci
+              run: npm ci
+            
+            - run: lint
+              name: npm run lint:fix
