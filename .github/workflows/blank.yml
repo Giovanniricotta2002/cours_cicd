@@ -100,15 +100,12 @@ jobs:
         run: npm ci
         working-directory: ./testAction
         
-      - name: test
-        working-directory: ./testAction
-        run: ls
-      # - name: Run Cypress e2e
-      #   # run: npm run test:e2e
-      #   uses: cypress-io/github-action@v6
-      #   with:
-      #     component: true
-      #     browser: firefox
-      #     project: ./testAction
-      #     headed: true
+      - name: Run Cypress e2e
+        # run: npm run test:e2e
+        uses: cypress-io/github-action@v6
+        with:
+          component: true
+          browser: firefox
+          project: ./testAction
+          headed: true
       
