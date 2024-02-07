@@ -99,8 +99,9 @@ jobs:
       - name: Run npm ci
         run: npm ci
         working-directory: ./testAction
-      
+        
       - name: test
+        working-directory: ./testAction
         run: ls
       # - name: Run Cypress e2e
       #   # run: npm run test:e2e
